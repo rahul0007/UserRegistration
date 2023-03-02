@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">UserRegistrationTask</string>
+    <string name="no_connection_available">Please check internet</string>
+    <string name="validation_empty_email">Please enter Email</string>
+    <string name="validation_valid_email">Please enter valid email</string>
+    <string name="order">Review Order</string>
+    <string name="login">Login</string>
+    <string name="password">Password*</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email*</string>
+    <string name="hint_password">Password</string>
+    <string name="first_name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="phone_number">Phone Number*</string>
+    <string name="hint_enter_first_name">Enter your first name here</string>
+    <string name="hint_enter_last_name">Enter your last name here</string>
+    <string name="hint_enter_phone_number_name">Enter your 10 digit phone number</string>
+    <string name="hint_email">Your email goes here</string>
+    <string name="gender">Gender</string>
+    <string name="button_next">Next</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_landmark">Landmark</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">Select Your State</string>
+    <string name="hnit_pincode">Pin Code</string>
+    <string name="button_submit">Submit</string>
+
+    <string name="validation_empty_first_name">Please enter first name</string>
+    <string name="validation_invalid_first_name">Please enter minimum 4 characters of first name</string>
+    <string name="validation_valid_phone_number">Please enter minimum 10 digits of phone number</string>
+    <string name="validation_empty_phone_number">Please enter phone number</string>
+
+    <string name="validation_empty_last_name">Please enter last name</string>
+    <string name="validation_invalid_last_name">Please enter minimum 4 characters of last name</string>
+
+    <string name="validation_valid_password">password should be  minimum eight characters, at least one letter, one number and one special character</string>
+    <string name="validation_valid_confirm_password">Please enter confirm password</string>
+    <string name="validation_empty_password">Please enter  password</string>
+    <string name="validation_empty_confirm_password">Please enter confirm password</string>
+    <string name="password_do_not_match" >password do not match</string>
+    <string name="select_image_from">Select Image From</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+
+    <string name="edu_info">Educational Info</string>
+    <string name="prof_info">Professional Info</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="education">Education*</string>
+    <string name="grade">Grade*</string>
+    <string name="year_of_passing">Year of Passing*</string>
+    <string name="hint_year_of_passing">Enter year of passing</string>
+    <string name="experience">Experience*</string>
+    <string name="designation">Designation*</string>
+    <string name="domain">Domain</string>
+    <string name="previous">Previous</string>
+    <string name="your_info">your Info</string>
+    <string name="select_qualification">Select your qualification</string>
+    <string name="grade_percent_hint">Enter your Grade or Percentage</string>
+    <string name="enter_passing_hint">Enter year of passing</string>
+    <string name="enter_experience_hint">Enter the year of experience</string>
+    <string name="enter_designation">Enter your Designation</string>
+    <string name="enter_domain">Enter your Domain</string>
+    <string name="validation_empty_education">Enter your Education</string>
+    <string name="validation_empty_passing_years">Please select years of passing</string>
+    <string name="validation_empty_grade">Please enter grade</string>
+    <string name="validation_empty_experience">Please enter experience</string>
+    <string name="validation_empty_designation">Please select designation</string>
+    <string name="validation_empty_domain">Please select domain</string>
+    <string name="users">Users</string>
+    <string name="no_data_found">No data found</string>
+    <string name="register">Register</string>
+    <string name="your_address">"Your Address "</string>
+
+
+</resources>

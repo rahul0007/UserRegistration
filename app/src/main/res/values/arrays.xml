@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="education">
+        <item>"PostGraduate"</item>
+        <item>"Graduate"</item>
+        <item>"Hsc"</item>
+        <item>"Ssc"</item>
+
+    </string-array>
+
+    <string-array name="designation">
+        <item>"Software Engineer"</item>
+        <item>"Junior Software Engineer"</item>
+        <item>"Senior Software Engineer"</item>
+        <item>"Software Architect"</item>
+        <item>"Project Manager"</item>
+
+
+    </string-array>
+
+ <string-array name="states">
+        <item>"Andhra Pradesh"</item>
+        <item>"Arunachal Pradesh"</item>
+        <item>"Assam"</item>
+        <item>"Bihar"</item>
+        <item>"Chhattisgarh"</item>
+        <item>"Goa"</item>
+        <item>"Gujarat"</item>
+        <item>"Maharashtra"</item>
+        <item>"Rajasthan"</item>
+        <item>"Karnataka"</item>
+
+
+    </string-array>
+
+
+    <string-array name="passingYears">
+        <item>"2010"</item>
+        <item>"2011"</item>
+        <item>"2012"</item>
+        <item>"2013"</item>
+        <item>"2014"</item>
+        <item>"2015"</item>
+        <item>"2016"</item>
+        <item>"2017"</item>
+        <item>"2018"</item>
+        <item>"2019"</item>
+        <item>"2020"</item>
+        <item>"2021"</item>
+        <item>"2022"</item>
+        <item>"2023"</item>
+
+    </string-array>
+
+</resources>

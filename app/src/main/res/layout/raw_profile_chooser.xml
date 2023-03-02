@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:clickable="true"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp20"
+            android:gravity="center"
+            android:text="@string/gallery" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp20"
+
+            android:gravity="center"
+            android:text="@string/camera"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

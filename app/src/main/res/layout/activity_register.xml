@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.userInfo.RegisterActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/custom_toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp90"
+                android:layout_height="@dimen/dp90"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@drawable/border_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewUserProfile"
+                android:layout_width="@dimen/dp90"
+                android:layout_height="@dimen/dp90"
+                android:layout_marginTop="@dimen/dp15"
+                android:padding="2dp"
+                android:src="@drawable/ic_user"
+                android:background="@drawable/border_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_border_layout"
+                android:gravity="center"
+                android:id="@+id/layoutProfile"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewUserProfile"
+                app:layout_constraintCircle="@+id/imageViewUserProfile"
+                app:layout_constraintCircleAngle="90"
+                app:layout_constraintCircleRadius="45dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewUserProfile"
+                app:layout_constraintStart_toStartOf="@+id/imageViewUserProfile">
+
+                <ImageView
+                    android:id="@+id/saturn_image"
+                    android:layout_width="20dp"
+
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_edit" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitleName"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:text="@string/first_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUserProfile" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextFirstName"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:drawableStart="@drawable/ic_person"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:text="Rahul"
+                android:hint="@string/hint_enter_first_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleName" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitleLastName"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/last_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextLastName"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableStart="@drawable/ic_person"
+                android:imeOptions="actionNext"
+android:text="Sondarva"
+                android:inputType="text"
+
+                android:hint="@string/hint_enter_last_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleLastName" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitlePhoneNumber"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/phone_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextPhoneNumber"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLength="10"
+                android:text="7600461686"
+                android:drawableStart="@drawable/ic_phone"
+                android:hint="@string/hint_enter_phone_number_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitlePhoneNumber" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitleEmail"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextEmail"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+android:text="rahul@gmail.com"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleEmail" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitleGender"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp35"
+                android:layout_marginEnd="@dimen/dp35"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleGender">
+
+                <RadioButton
+                    android:id="@+id/radio0"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-5dp"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textStyle="normal"
+                    app:buttonTint="@color/darkOrange" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:text="Female"
+                    android:textStyle="normal"
+                    app:buttonTint="@color/darkOrange" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitlePassword"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextPassword"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:drawableStart="@drawable/ic_password"
+                android:hint="@string/hint_email"
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                android:text="Rahul@007"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitlePassword" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_height="30dp"
+                android:id="@+id/imageViewToggle"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+                app:layout_constraintTop_toTopOf="@+id/editTextPassword"
+                app:srcCompat="@drawable/ic_custom_hide" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitleConfirmPassword"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/confirm_password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextConfirmPassword"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password"
+                android:hint="@string/hint_email"
+                android:imeOptions="actionDone"
+                android:text="Rahul@007"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleConfirmPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp35"
+                android:background="@color/darkOrange"
+                android:gravity="center"
+                android:id="@+id/buttonNext"
+                android:text="@string/button_next"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

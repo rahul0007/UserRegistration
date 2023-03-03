@@ -43,16 +43,16 @@ class UsersInfoDialog : DialogFragment(), View.OnClickListener {
             imageViewClose.setOnClickListener(this)
             textViewEmail.text = userMaster?.Email
             textViewPhone.text = userMaster?.PhoneNumber
-            textViewUserName.text = userMaster?.FirstName+""+userMaster?.LastName
+            textViewUserName.text = userMaster?.FirstName+" "+userMaster?.LastName
             textViewDesignation.text = userMaster?.Designation
             textViewAddress.text = userMaster?.Address
             textViewLandmark.text = userMaster?.Landmark
             textViewCity.text = userMaster?.City +","+userMaster?.State
             textViewPincode.text = userMaster?.PinCode
             textViewQualification.text = userMaster?.Qualification
-            textViewPassingYear.text = "Passing Year-"+userMaster?.PassingYear
+            textViewPassingYear.text = "Passing Year - "+userMaster?.PassingYear
             textViewGrade.text =userMaster?.Grade
-            textViewExperience.text =userMaster?.Experience +"Years of Experience"
+            textViewExperience.text =userMaster?.Experience +" Years of Experience"
             textViewDomain.text =userMaster?.Domain
             Glide.with(this).load(File(userMaster?.Profile)).apply(RequestOptions().circleCrop()).placeholder(R.drawable.ic_user)
                 .into(imageViewUserProfile)

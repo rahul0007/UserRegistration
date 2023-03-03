@@ -39,7 +39,7 @@ class UsersAdapter(
         @SuppressLint("CheckResult")
         fun bind(userMaster: UserMaster) {
             itemView.textViewName.text = userMaster.FirstName + " " + userMaster.LastName
-            itemView.textViewAddress.text = userMaster.Address + "," + userMaster.City
+            itemView.textViewAddress.text = userMaster.Address + "," + userMaster.State
             Glide.with(context).load(File(userMaster.Profile)).apply(RequestOptions().circleCrop()).placeholder(R.drawable.ic_user)
                 .into(itemView.imageViewUserProfile)
             itemView.setOnClickListener {

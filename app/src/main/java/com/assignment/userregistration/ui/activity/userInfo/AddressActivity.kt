@@ -54,6 +54,7 @@ class AddressActivity : BaseActivity(), View.OnClickListener {
 
     private fun setOnClickListener() {
         buttonSubmit.setOnClickListener(this)
+        imageViewBack.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -68,6 +69,10 @@ class AddressActivity : BaseActivity(), View.OnClickListener {
                     this, this, userInfoViewModel.delegatesUserDataInsert,
                     userInfoViewModel.errorLiveData
                 ).insertUserData(userMaster)
+            }
+            R.id.imageViewBack->
+            {
+                finish()
             }
         }
     }

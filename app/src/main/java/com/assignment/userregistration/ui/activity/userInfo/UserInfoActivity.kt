@@ -50,14 +50,15 @@ class UserInfoActivity : BaseActivity(), View.OnClickListener {
         textViewTitle.text = resources.getString(R.string.your_info)
 
         userMaster = intent.extras?.getParcelable(Constant.USER_DATA)!!
-        setAutoCompleteView(editTextEducation,resources.getStringArray(R.array.education))
-        setAutoCompleteView(editTextPassingYear,resources.getStringArray(R.array.passingYears))
-        setAutoCompleteView(editTextDesignation,resources.getStringArray(R.array.designation))
+        setAutoCompleteView(editTextEducation, resources.getStringArray(R.array.education))
+        setAutoCompleteView(editTextPassingYear, resources.getStringArray(R.array.passingYears))
+        setAutoCompleteView(editTextDesignation, resources.getStringArray(R.array.designation))
     }
 
 
     private fun setOnClickListener() {
         buttonNext.setOnClickListener(this)
+        imageViewBack.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -75,6 +76,9 @@ class UserInfoActivity : BaseActivity(), View.OnClickListener {
                     AddressActivity.start(this, bundle)
                 }
 
+            }
+            R.id.imageViewBack -> {
+                finish()
             }
         }
     }

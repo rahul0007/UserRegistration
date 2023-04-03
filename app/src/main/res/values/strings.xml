@@ -31,6 +31,14 @@
     <string name="validation_valid_phone_number">Please enter minimum 10 digits of phone number</string>
     <string name="validation_empty_phone_number">Please enter phone number</string>
 
+    <string name="validation_empty_address">Please enter address.</string>
+    <string name="validation_empty_landmark">Please enter landmark.</string>
+    <string name="validation_empty_city">Please enter city.</string>
+    <string name="validation_empty_state">Please enter state.</string>
+    <string name="validation_empty_pincode">Please enter pincode.</string>
+
+    <string name="validation_valid_address"> Address should be more than 4 characters.</string>
+
     <string name="validation_empty_last_name">Please enter last name</string>
     <string name="validation_invalid_last_name">Please enter minimum 4 characters of last name</string>
 
@@ -42,7 +50,12 @@
     <string name="select_image_from">Select Image From</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
-
+    <string name="empty_qualification">Please select qualification.</string>
+    <string name="blank_year_of_passing">Please select passing year.</string>
+    <string name="blank_grade">Please enter your grade.</string>
+    <string name="blank_experience">Please enter your experience.</string>
+    <string name="blank_designation">Please enter your designation.</string>
+    <string name="blank_domain">Please enter your domain.</string>
     <string name="edu_info">Educational Info</string>
     <string name="prof_info">Professional Info</string>
     <string name="basic_info">Basic Info</string>

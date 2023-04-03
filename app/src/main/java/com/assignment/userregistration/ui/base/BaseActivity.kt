@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.LayoutRes
-import com.assignment.userregistration.utils.AppPreferences
 import com.assignment.userregistration.utils.Validator
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -13,9 +12,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 abstract class BaseActivity : AppCompatActivity() {
 
-
-    @Inject
-    lateinit var appPreferences: AppPreferences
 
     @Inject
     lateinit var validator: Validator

@@ -2,11 +2,13 @@ package com.assignment.userregistration.viewModel
 
 class Const {
     companion object {
-        val SUCCESS = "Success"
-        val ERROR_VALID_EMAIL = "Please enter valid email"
-        val ERROR_EMAIL_EMPTY = "Please enter email address"
-        val ERROR_SOMETHING_WENT_WRONG = "Something went wrong!"
-        val INVALID_USER = "Invalid user. Please contact admin"
-        val SHARED_PREF_NAME = "shopfast"
+
+
+        const val DB_NAME = "Users.db"
+        const val PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$"
+        const val MALE = "Male"
+        const val FEMALE = "FeMale"
+        const val CAMERA = "Camera"
+        const val GALLERY = "Gallery"
     }
 }

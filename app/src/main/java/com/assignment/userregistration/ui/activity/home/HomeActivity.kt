@@ -1,85 +1,51 @@
 package com.assignment.userregistration.ui.activity.home
-
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
-import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import com.assignment.userregistration.R
-import com.assignment.userregistration.database.user.UserMaster
-import com.assignment.userregistration.ui.activity.userInfo.RegisterActivity
-import com.assignment.userregistration.ui.adapter.UsersAdapter
-import com.assignment.userregistration.ui.base.BaseActivity
-import com.assignment.userregistration.ui.dialog.UsersInfoDialog
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.custom_toolbar.*
+import com.assignment.userregistration.databinding.ActivityHomeBinding
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
-class HomeActivity : BaseActivity(),
-    View.OnClickListener {
-    lateinit var homeViewModel: HomeViewModel
+@AndroidEntryPoint
+class HomeActivity : AppCompatActivity()
+    {
+    private val appBarConfiguration by lazy {
+        AppBarConfiguration(
+            topLevelDestinationIds =
+            setOf(
+                R.id.userListFragment,
+                R.id.addressInfoFragment,
+                R.id.yourInfoFragment,
+                R.id.registerFragment
+            )
+        )
+    }
+
+    private lateinit var binding: ActivityHomeBinding
+    private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+        setupNavigation()
     }
 
-    override fun findFragmentPlaceHolder() = 0
-
-    override fun findContentView() = R.layout.activity_home
-
-    override fun observeViewModel() {
-        setOnClickListener()
-        textViewTitle.text = resources.getString(R.string.users)
-        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-        homeViewModel.getUsers()
-        homeViewModel.getUserListDelegate.observe(this) {
-            val adapter = UsersAdapter(
-                it as ArrayList<UserMaster>,
-                this,
-                object : UsersAdapter.OnItemClickStatusListener {
-                    override fun itemsClicked(userMaster: UserMaster) {
-                        val dilog = UsersInfoDialog()
-                        dilog.setUserInfo(userMaster)
-                        dilog.setStyle(DialogFragment.STYLE_NORMAL, R.style.MyDialog)
-                        dilog.show(supportFragmentManager, "userMaster")
-                    }
-
-                })
-            recyclerViewUser.adapter = adapter
-
-            if (adapter.itemCount > 0) {
-                textViewPlaceHolder.visibility = View.GONE
-                recyclerViewUser.visibility = View.VISIBLE
-            } else {
-                textViewPlaceHolder.visibility = View.VISIBLE
-                recyclerViewUser.visibility = View.GONE
-            }
-        }
-
-        homeViewModel.delegatesMessage.observe(this) {
-            Toast.makeText(this, "" + it, Toast.LENGTH_SHORT).show()
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    private fun setOnClickListener() {
-        imageViewBack.setOnClickListener(this)
-        buttonRegister.setOnClickListener(this)
-        imageViewBack.visibility = View.GONE
-    }
-
-    override fun onClick(view: View?) {
-        when (view?.id) {
-            R.id.buttonRegister -> {
-                RegisterActivity.start(this)
-            }
-        }
-    }
-
-    companion object {
-        fun start(context: BaseActivity) {
-            val intent = Intent(context, HomeActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            context.startActivity(intent)
-        }
+    private fun setupNavigation() {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
     }
 }
+
+
+
+
+
+

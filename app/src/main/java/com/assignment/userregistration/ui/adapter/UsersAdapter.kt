@@ -17,10 +17,10 @@ import kotlinx.android.synthetic.main.row_user.view.*
 import java.io.File
 
 class UsersAdapter(
-    var items: ArrayList<UserMaster>,
     var context: Context,
     var listner: OnItemClickStatusListener
 ) : RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
+    var items=ArrayList<UserMaster>()
     lateinit var view: View
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersAdapter.ViewHolder {
         view = LayoutInflater.from(context).inflate(R.layout.row_user, parent, false)
@@ -31,8 +31,16 @@ class UsersAdapter(
         return items.size
     }
 
+
+
     override fun onBindViewHolder(holder: UsersAdapter.ViewHolder, position: Int) {
         holder.bind(items[position])
+    }
+
+    fun updateData(it: ArrayList<UserMaster>?) {
+        items.clear()
+        it?.let { it1 -> items.addAll(it1) }
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {

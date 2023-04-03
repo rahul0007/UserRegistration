@@ -91,7 +91,6 @@ dependencies {
     implementation ('com.yalantis:ucrop:2.1.1@aar') {
         transitive = true
     }
-
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 }
